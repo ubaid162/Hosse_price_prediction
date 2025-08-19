@@ -1,0 +1,86 @@
+<!-- templates/about.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About - House Price Predictor</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: url("{{ url_for('static', filename='bg.jpg') }}") no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .about-box {
+      background: rgba(8, 8, 8, 0.47);  /* Glass effect */
+      backdrop-filter: blur(10px);            /* Blur behind box */
+      padding: 40px;
+      margin: 80px auto;
+      border-radius: 12px;
+      max-width: 900px;
+      color: #fff;
+      text-shadow: 1px 1px 3px #000;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+    h2 {
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+    p {
+      font-size: 1.1em;
+      margin-bottom: 16px;
+      font-color : black;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  {% include 'navbar.html' %}
+  <div class="container">
+    <div class="about-box">
+      <h2>ℹ️ About the Project</h2>
+      <p>
+        The <strong>House Price Predictor</strong> is a data-driven web application designed to estimate the market value of residential properties based on key features provided by the user. This tool helps users make informed decisions whether they're buying, selling, or investing in property.
+      </p>
+
+      <p>
+        💡 The predictive model used is a <strong>Random Forest Regressor</strong> which achieved a training accuracy of <strong>96.2%</strong>, making it both powerful and reliable for estimating house prices.
+      </p>
+
+      <p>
+        🔍 <strong>Features Used:</strong>
+        <ul>
+          <li>Area (categorical)</li>
+          <li>Price per Square Foot (numerical)</li>
+          <li>Location (categorical)</li>
+          <li>Total Square Feet (numerical)</li>
+          <li>Number of Bathrooms (numerical)</li>
+          <li>BHK - Number of Bedrooms (numerical)</li>
+        </ul>
+      </p>
+
+      <p>
+        🧹 <strong>Preprocessing:</strong><br>
+        - <code>area</code> encoded with <strong>OrdinalEncoder</strong><br>
+        - <code>location</code> encoded with <strong>LabelEncoder</strong><br>
+        - Handled missing and inconsistent values<br>
+        - Outliers were filtered based on domain rules<br>
+        - Model saved using <code>joblib</code> and used in Flask app
+      </p>
+
+      <p>
+        ⚙️ <strong>Tech Stack:</strong><br>
+        <strong>Backend:</strong> Python, Flask, scikit-learn<br>
+        <strong>Frontend:</strong> HTML5, Bootstrap 5, CSS3, Jinja2<br>
+        <strong>Model:</strong> RandomForestRegressor (from scikit-learn)
+      </p>
+
+      <p>
+        This project is part of a data science capstone and demonstrates the integration of ML models into web applications for real-world use.
+      </p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!-- templates/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home - House Price Predictor</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: url("{{ url_for('static', filename='home-bg.png') }}") no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .content-box {
+      background-color: rgba(4, 4, 4, 0.28);
+      backdrop-filter: blur(10px);
+      padding: 40px;
+      margin: 100px auto;
+      border-radius: 12px;
+      max-width: 850px;
+      color: #fff;
+      text-shadow: 1px 1px 4px #000;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+    h1 {
+      font-weight: 700;
+    }
+    p {
+      font-size: 1.15em;
+    }
+  </style>
+</head>
+<body>
+  {% include 'navbar.html' %}
+  <div class="container">
+    <div class="content-box text-center">
+      <h1>🏠 Welcome to House Price Predictor</h1><br>
+      <p>Confused about your property's value? We've got you covered.</p>
+      <p>This intelligent web app uses machine learning to estimate the market value of a house based on its location, size, number of rooms, and other features.</p>
+      <p>Simply log in, enter the property details, and get instant predictions!</p>
+    </div>
+  </div>
+</body>
+</html>
