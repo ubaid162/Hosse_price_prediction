@@ -10,12 +10,12 @@ It helps users understand how different parameters like location, size, and amen
 The project is integrated with a Flask web interface, allowing users to input details and get instant price predictions.
 
 
-Features
-🔹 Data preprocessing and encoding for categorical variables
-🔹 Model training using Random Forest Regressor
-🔹 Interactive web UI built with Flask
-🔹 Real-time prediction results
-🔹 Well-structured and modular project
+Features:
+* 🔹 Data preprocessing and encoding for categorical variables
+* 🔹 Model training using Random Forest Regressor
+* 🔹 Interactive web UI built with Flask
+* 🔹 Real-time prediction results
+* 🔹 Well-structured and modular project
 
 
 Project Structure
